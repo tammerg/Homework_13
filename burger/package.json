@@ -1,0 +1,23 @@
+{
+  "name": "i_needz_burgers",
+  "version": "1.0.0",
+  "description": "an app that allows users to input what burger they want to eat in a database so they wont forget, then when they finally devour it the user can check it off",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\u0016\u001b[2~"
+  },
+  "author": "Tammer Galal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "method": "^2.0.0",
+    "mysql": "^2.10.2",
+    "override": "0.0.1"
+  }
+}
