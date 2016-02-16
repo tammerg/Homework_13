@@ -2,7 +2,7 @@
   "name": "i_needz_burgers",
   "version": "1.0.0",
   "description": "an app that allows users to input what burger they want to eat in a database so they wont forget, then when they finally devour it the user can check it off",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

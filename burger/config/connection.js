@@ -1,4 +1,4 @@
-module.exports = function connection (){
+module.exports = function connection(){
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   port: 3306,
