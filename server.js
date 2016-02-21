@@ -18,9 +18,8 @@ var exphbs = require('express-handlebars');
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
-app.get('/', function(req, res){
-  res.render('index');
-});
+var routes = require('./controllers/burger_controller.js');
+app.use('/', routes);
 
 app.listen(PORT, function(req, res){
   console.log('You are now connected');
