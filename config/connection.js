@@ -1,4 +1,3 @@
-module.exports = function connection(){
 var mysql = require('mysql');
 var connection = mysql.createConnection({
   port: 3306,
@@ -17,4 +16,5 @@ connection.query('SELECT 1 + 1 AS solution', function(err, data) {
 });
 
 connection.end();
-};
+
+module.exports = connection;
