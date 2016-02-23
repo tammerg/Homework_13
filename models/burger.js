@@ -1,17 +1,28 @@
-var orm = require('../config/orm.js');
+var orm = require("../config/orm.js");
 
-var burgerThings ={
-  findAll: function(cb) {
-    orm.selectAll("about_a_burger", function(res){
+
+var burger = {
+  addBurger: function(burgerName, cb) {
+    orm.addBurger(burgerName, function(res) {
       cb(res);
     });
   },
-  addBurger: function(nameInput, cb){
-    orm.newBurger("about_a_burger", nameInput, cb);
+  devourBurger: function(burgerID, cb) {
+    orm.devourBurger(burgerID, function(res) {
+      cb(res);
+    });
   },
-  devourBurger: function(inputId, cb){
-    orm.devourBurger("about_a_burger", inputId, cb);
+  showBurgers: function(cb) {
+    orm.showBurgers(function(res) {
+      cb(res);
+    });
   },
+  deleteBurger: function(burgerID, cb) {
+    orm.deleteBurger(burgerID, function(res) {
+      cb(res);
+    });
+  }
 };
 
-module.export = burgerThings;
+
+module.exports = burger;
