@@ -11,7 +11,6 @@ router.get('/', function (req, res) {
 
 router.post('/add', function (req, res) {
   burger.addBurger(req.body.burger_name, function (result) {
-
     res.redirect('/');
   });
 });

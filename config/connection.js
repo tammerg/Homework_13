@@ -9,10 +9,12 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-connection.query('SELECT 1 + 1 AS solution', function(err, data) {
-  if (err) throw err;
-
-  console.log('The solution is: ', data);
+connection.connect(function(err) {
+    if (err) {
+        console.error('error connecting: ' + err.stack);
+        return;
+    }
+    console.log('connected as id ' + connection.threadId);
 });
 
 connection.end();
