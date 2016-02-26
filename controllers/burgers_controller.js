@@ -9,6 +9,12 @@ router.get('/', function (req, res) {
   });
 });
 
+router.post('/', function (req, res) {
+  burger.showBurgers(function (burgers_data) {
+    res.render('index');
+  });
+});
+
 router.post('/add', function (req, res) {
   burger.addBurger(req.body.burger_name, function (result) {
     res.redirect('/');
@@ -17,7 +23,6 @@ router.post('/add', function (req, res) {
 
 router.post('/devour', function (req, res) {
   burger.devourBurger(req.body.id, function (result) {
-
     res.redirect('/');
   });
 });
