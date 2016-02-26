@@ -19,12 +19,11 @@
           <th>Burger Name</th>
         </thead>
         <tbody>
-          <td>
-            {{#each burger_name}}
-            {{#if this.devoured}}
-            {{/if}}
-            {{/each}}
-          </td>
+          {{#each burgers}}
+            <td>
+            {{burgers_name}}
+            </td>
+          {{/each}}
         </tbody>
       </table>
     </div>
