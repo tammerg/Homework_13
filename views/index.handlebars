@@ -7,7 +7,6 @@
     <div class="col-md-4">
       <h4>Burgers you'd like to devour</h4>
       <form method="POST" action="/add" class="form-inline">
-        {{this.burger_name}}
         <div class="form-group">
           <label class="sr-only" for="exampleInputEmail3">Burger_Want</label>
           <input type="text" class="form-control" placeholder="Triple Mega Burger" name="burger_name" value={{this.id}}>
@@ -21,7 +20,7 @@
         <tbody>
           {{#each burgers}}
             <td>
-            {{burgers_name}}
+            {{this.burgers_name}}
             </td>
           {{/each}}
         </tbody>
@@ -36,10 +35,6 @@
       </thead>
       <tbody>
         <td>
-          {{#each burger_name}}
-          {{#if this.devoured}}
-          {{/if}}
-          {{/each}}
         </td>
       </tbody>
     </table>
