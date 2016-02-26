@@ -14,15 +14,13 @@
         <button type="submit" class="btn btn-default">Ate it!</button>
       </form>
       <table class="table table-bordered">
-        <thead>
-          <th>Burger Name</th>
-        </thead>
+        <thead><th>Burger Name</th></thead>
+        {{#each burgers_data}}
         <tbody>
-          {{#each burgers}}
             <td>
-            {{this.burgers_name}}
+            {{this.burger_name}}
             </td>
-          {{/each}}
+        {{/each}}
         </tbody>
       </table>
     </div>
