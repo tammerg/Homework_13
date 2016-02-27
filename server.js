@@ -6,7 +6,9 @@ var routes = require('./controllers/burgers_controller.js');
 var PORT = 8080;
 var app = express();
 
-app.use(express.static(__dirname + '/public'));
+app.use('/scripts', express.static('public/scripts'));
+app.use('/css', express.static('public/stylesheets'));
+app.use('/img', express.static('public/img'));
 
 app.use(bodyParser.urlencoded({
   extended: false
