@@ -16,12 +16,17 @@
       <table class="table table-bordered">
         <thead><th>Burgerzzz Name</th></thead>
         {{#each burgers_data}}
+        {{#if this.devoured}}
         <tbody>
             <td>
-            {{this.burger_name}}
-            <button type="submit" class="btn btn-danger">Eat it!</button>
+              <form method="POST" action="/devour">
+                {{this.burger_name}}
+                <input type="hidden" type="text" name="id" value={{this.id}}>
+                <button type="submit" class="btn btn-warning pull-right"> Eat It </button>
+              </form>
             </td>
         </tbody>
+        {{/if}}
         {{/each}}
       </table>
     </div>
@@ -36,14 +41,19 @@
         <button type="submit" class="btn btn-default">Ate it!</button>
       </form>
       <table class="table table-bordered">
-        <thead>
-          <th>Burger Name</th>
-        </thead>
+        <thead><th>Burger Name</th></thead>
         {{#each burgers_data}}
+        {{#if this.ready}}
         <tbody>
           <td>
+            <form method="POST" action="/delete?_method=DELETE">
+              {{this.burger_name}}
+              <input type="hidden" type="text" name="id" value={{this.id}}>
+              <button type="submit" class="btn btn-warning pull-right"> Delete It </button>
+            </form>
           </td>
         </tbody>
+      {{/if}}
       {{/each}}
       </table>
     </div>
