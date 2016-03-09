@@ -3,8 +3,8 @@ var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
 var exphbs = require('express-handlebars');
 var routes = require('./controllers/burgers_controller.js');
-var dot = require('dotenv').config();
-var PORT = process.env.PORT || 8080;
+require('dotenv').config();
+var PORT = process.env.PORT || 3306;
 var app = express();
 
 app.use('/scripts', express.static('public/scripts'));
