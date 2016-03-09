@@ -2,9 +2,9 @@ var mysql = require('mysql');
 var connection = mysql.createConnection({
   port: 3306,
   host : 'l3855uft9zao23e2.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-  user : 'uav3pmrxaujty64v',
-  password : 'ln7yakcrr9xmoto2',
-  database : 'ir724yjxghmglpnb'
+  user : 'vd9ql3qe45w11uy2',
+  password : 'aaiiygito6gm5ce6',
+  database : 'oafe1ud6yohijc7k'
 });
 
 
